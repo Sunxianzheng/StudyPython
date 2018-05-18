@@ -1,0 +1,18 @@
+#coding:utf-8
+#冒泡排序
+def bubble(number):
+	for i in range(0,len(number)):
+		for j in range(i+1,len(number)):
+			if number[i]>number[j]:
+				number[i],number[j] = number[j],number[i]
+	return number
+#比较列表相同的元素
+def Cmp(Old):
+	New = []
+	for o in Old:
+		print(o,end=' ')
+		if not o in New:
+			New.append(o)
+	return New;
+Old = [1,1,2,2,3,3,4,4,5]
+print(Cmp(Old))
