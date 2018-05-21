@@ -1,4 +1,4 @@
-#coding:utf-8
+'''#coding:utf-8
 #冒泡排序
 def bubble(number):
 	for i in range(0,len(number)):
@@ -15,4 +15,39 @@ def Cmp(Old):
 			New.append(o)
 	return New;
 Old = [1,1,2,2,3,3,4,4,5]
-print(Cmp(Old))
+print(Cmp(Old))'''
+##第二天
+dict ={'1':'dag',2:'cat','3':'monkey'}
+#print(dict['1'])
+dict['1'] = 'changdog'
+#print(dict['1'])
+'''count = len(dict)
+print(count)
+Dictinfo = str(dict)
+print(Dictinfo)
+DictType = type(dict)
+print(DictType)'''
+'''if '1' in dict:
+	print("true")
+else:
+	print("false")
+print(dict.keys())
+del dict['1']
+del dict[2]
+print(str(dict))'''
+
+#菲波拉切数列
+'''def  fblq():
+	a,b = 0,1
+	while b<10:
+		print(b,end=' ')
+		a,b = b,a+b
+print(fblq(),end='')'''
+#1-100sum
+'''n =100
+count = 1
+number = 0
+while count<=n:
+	number = number+count
+	count+=1
+print(number)'''
