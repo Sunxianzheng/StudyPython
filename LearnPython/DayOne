@@ -37,12 +37,11 @@ del dict[2]
 print(str(dict))'''
 
 #菲波拉切数列
-'''def  fblq():
+'''def fblq(number):
 	a,b = 0,1
-	while b<10:
-		print(b,end=' ')
-		a,b = b,a+b
-print(fblq(),end='')'''
+	while b<number:
+		print(b)
+		a,b = b,a+b'''
 #1-100sum
 '''n =100
 count = 1
@@ -51,3 +50,20 @@ while count<=n:
 	number = number+count
 	count+=1
 print(number)'''
+'''class Dog():
+	def __init__(self, name,age,sex):
+		self.n = name
+		self.a = age
+		self.s = sex
+d = Dog("sdak",18,"xxxxx")
+print(d.n)'''
+class Cat():
+	name = "jack"
+	sex = "母"
+	age  = 18
+c = Cat()
+print(c.name)
+
+
+
+
