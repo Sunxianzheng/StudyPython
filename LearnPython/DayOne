@@ -1,3 +1,5 @@
+import json
+import pymysql
 '''#coding:utf-8
 #冒泡排序
 def bubble(number):
@@ -17,9 +19,9 @@ def Cmp(Old):
 Old = [1,1,2,2,3,3,4,4,5]
 print(Cmp(Old))'''
 ##第二天
-dict ={'1':'dag',2:'cat','3':'monkey'}
+#dict ={'1':'dag',2:'cat','3':'monkey'}
 #print(dict['1'])
-dict['1'] = 'changdog'
+#dict['1'] = 'changdog'
 #print(dict['1'])
 '''count = len(dict)
 print(count)
@@ -57,13 +59,62 @@ print(number)'''
 		self.s = sex
 d = Dog("sdak",18,"xxxxx")
 print(d.n)'''
-class Cat():
+'''class Cat():
 	name = "jack"
 	sex = "母"
 	age  = 18
 c = Cat()
-print(c.name)
+print(c.name)'''
+'''data =  { 
+'Name':'Sun',
+'Birthday':'1995-05-13',
+"programmers": [ 
 
+{ "firstName": "Brett", "lastName":"McLaughlin", "email": "aaaa" },
 
+{ "firstName": "Jason", "lastName":"Hunter", "email": "bbbb" },
 
+{ "firstName": "Elliotte", "lastName":"Harold", "email": "cccc" }
 
+]
+}
+jsonStr = json.dumps(data)
+#print("json原始数据",repr(data))
+#print("json对象",jsonStr)
+data1 = json.loads(jsonStr)
+print(data1["Name"])
+print(data1["Birthday"])
+print(data1["programmers"][0]["firstName"])'''
+# 约瑟夫环
+
+#汉诺塔
+'''def hannuota(n,a,b,c):
+	if(n==1):
+		print(a,"->",c)
+		return 
+	hannuota(n-1,a,c,b)
+	hannuota(1,a,b,c)
+	hannuota(n-1,b,a,c)
+hannuota(3,"a","b","c")'''
+
+#数据库操作
+#  打开数据库连接
+'''db = pymysql.connect("localhost","root","1234","sunxianzheng")
+
+#使用 cursor() 方法创建一个游标对象 cursor
+cursor = db.cursor()
+sql ="SELECT * FROM userinfo  WEHERE id='%d'"%(7)
+try:
+	# 使用 execute()  方法执行 SQL 查询 
+	cursor.execute(sql)
+	#获取所有记录列表
+	result = cursor.fetchall()
+	for row in result:
+		idid = row[0]
+		name = row[1]
+		password = row[2]
+		print ("idid=%s,name=%s,password=%d" %(idid, name, password))
+except:
+	print ("Error: unable to fetch data")
+db.close()'''
+print(12%10)
